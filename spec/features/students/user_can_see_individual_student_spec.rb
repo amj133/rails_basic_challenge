@@ -6,7 +6,6 @@ describe "user can see individual student" do
       student = Student.create!(name: "Bob Jones")
 
       visit student_path(student)
-      save_and_open_page
 
       expect(page).to have_content("Student Name: Bob Jones")
     end
