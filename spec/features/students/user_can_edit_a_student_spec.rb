@@ -7,7 +7,7 @@ describe "user can edit a student" do
 
       visit edit_student_path(student)
       fill_in('student[name]', with: "Schmilly Smob")
-      click_on('Edit Student')
+      click_on('Update Student')
 
       expect(current_path).to eq('/students/1')
       expect(page).to have_content("Student Name: Schmilly Smob")
