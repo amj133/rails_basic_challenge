@@ -1,0 +1,8 @@
+<h2>Student Information</h2>
+<p>Student Name: <%= @student.name %></p>
+
+<h3>Addresses:</h3>
+<%= render partial: 'students/address', collection: @student.addresses %>
+
+<h3>Courses:</h3>
+<%= render partial: 'students/course', collection: @student.courses %>
