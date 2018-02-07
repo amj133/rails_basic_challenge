@@ -5,7 +5,7 @@ describe "user can create a new address for a student" do
     it "can create an address" do
       student = Student.create!(name: "Bill Bob")
 
-      visit new_student_address(student)
+      visit new_student_address_path(student)
       fill_in('address[description]', with: "Summer Home")
       fill_in('address[street]', with: "123 Fake St.")
       fill_in('address[street]', with: "Richmond")
