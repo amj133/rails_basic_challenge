@@ -8,7 +8,7 @@ describe "user can see individual student" do
       student.courses.create!(name: "Physics")
 
       visit student_path(student)
-
+      save_and_open_page
       expect(page).to have_content("Student Name: Bob Jones")
       expect(page).to have_content("Courses:")
       expect(page).to have_content("Biology")
